@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>স্মৃতিময় মুহূর্তগুলো</title>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Kalpana';
+      src: url('fonts/Kalpana-Regular.ttf');
+    }
+  </style>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
   <style>
     body {
@@ -14,6 +20,9 @@
       text-align: center;
       margin: 0;
       padding: 0;
+    }
+    h1, h2, .footer {
+      font-family: 'Kalpana', sans-serif;
     }
     h1 {
       color: #c9184a;
@@ -27,7 +36,7 @@
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
       padding: 20px;
       max-width: 1000px;
@@ -45,8 +54,22 @@
     }
     .footer {
       color: #2b3aff;
-      font-size: 1.2rem;
-      margin-bottom: 30px;
+      font-size: 1.8rem;
+      margin: 40px 0 20px 0;
+    }
+    .videos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 20px 40px 20px;
+    }
+    .videos video {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -68,10 +91,10 @@
   </div>
 
   <div class="footer">ভিডিও সেকশন</div>
-   <div class="videos">
-            <video controls src="videos/video1.mp4"></video>
-            <video controls src="videos/video2.mp4"></video>
-        </div>
+  <div class="videos">
+    <video controls src="videos/video1.mp4"></video>
+    <video controls src="videos/video2.mp4"></video>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
