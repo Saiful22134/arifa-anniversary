@@ -2,27 +2,82 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>লগইন করুন</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Kalpana', sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
+      font-family: 'Hind Siliguri', sans-serif;
+      background: url('https://via.placeholder.com/1500') no-repeat center center fixed; /* ব্যাকগ্রাউন্ড ব্লার ইফেক্ট */
+      background-size: cover;
       height: 100vh;
+      margin: 0;
+      display: flex;
       justify-content: center;
       align-items: center;
     }
     .login-box {
-      background: white;
+      background: rgba(255, 255, 255, 0.8); /* হালকা সাদা ব্যাকগ্রাউন্ড */
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
     }
     input {
-      display: block;
-      margin: 10px 0;
-      padding: 8px;
       width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+    input:focus {
+      border-color: #3f51b5;
+      outline: none;
+    }
+    .show-pass {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:active {
+      box-shadow: none;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .login-box {
+        max-width: 80%;
+      }
     }
   </style>
 </head>
@@ -31,17 +86,29 @@
     <h2>প্রবেশ করুন</h2>
     <input type="text" id="username" placeholder="ইউজারনেম বা নাম্বার">
     <input type="password" id="password" placeholder="পাসওয়ার্ড">
+    <span class="show-pass" onclick="togglePassword()">👁️</span>
     <button onclick="login()">লগইন</button>
-    <p id="error" style="color: red;"></p>
+    <p id="error" class="error"></p>
   </div>
 
   <script>
+    // পাসওয়ার্ড শো/হাইড ফাংশন
+    function togglePassword() {
+      const passField = document.getElementById('password');
+      if (passField.type === 'password') {
+        passField.type = 'text';
+      } else {
+        passField.type = 'password';
+      }
+    }
+
+    // লগইন ফাংশন
     function login() {
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
       // এখানে তুমি ইউজারনেম ও পাসওয়ার্ড কাস্টমাইজ করতে পারো
-      if ((username === "arifa123" || username === "01319768205") && password === "15042025") {
+      if ((username === "Arifa123" || username === "01319768205") && password === "15042025") {
         window.location.href = "home.html"; // তোমার actual anniversary পেজ
       } else {
         document.getElementById('error').innerText = "ভুল ইউজারনেম বা পাসওয়ার্ড!";
