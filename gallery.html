@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>স্মৃতিময় মুহূর্তগুলো</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #ffeef2;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #c9184a;
+      font-size: 2.5rem;
+      margin-top: 30px;
+    }
+    h2 {
+      color: #2b3aff;
+      margin-top: 20px;
+      font-size: 1.8rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery a img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery a img:hover {
+      transform: scale(1.05);
+    }
+    .footer {
+      color: #2b3aff;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>স্মৃতিময় মুহূর্তগুলো</h1>
+  <h2>ছবির গ্যালারি</h2>
+  <div class="gallery">
+    <a href="images/photo1.jpg" data-lightbox="anniversary" data-title="ছবি ১"><img src="images/photo1.jpg" alt="ছবি ১"></a>
+    <a href="images/photo2.jpg" data-lightbox="anniversary" data-title="ছবি ২"><img src="images/photo2.jpg" alt="ছবি ২"></a>
+    <a href="images/photo3.jpg" data-lightbox="anniversary" data-title="ছবি ৩"><img src="images/photo3.jpg" alt="ছবি ৩"></a>
+    <a href="images/photo4.jpg" data-lightbox="anniversary" data-title="ছবি ৪"><img src="images/photo4.jpg" alt="ছবি ৪"></a>
+    <a href="images/photo5.jpg" data-lightbox="anniversary" data-title="ছবি ৫"><img src="images/photo5.jpg" alt="ছবি ৫"></a>
+    <a href="images/photo6.jpg" data-lightbox="anniversary" data-title="ছবি ৬"><img src="images/photo6.jpg" alt="ছবি ৬"></a>
+    <a href="images/photo7.jpg" data-lightbox="anniversary" data-title="ছবি ৭"><img src="images/photo7.jpg" alt="ছবি ৭"></a>
+    <a href="images/photo8.jpg" data-lightbox="anniversary" data-title="ছবি ৮"><img src="images/photo8.jpg" alt="ছবি ৮"></a>
+    <a href="images/photo9.jpg" data-lightbox="anniversary" data-title="ছবি ৯"><img src="images/photo9.jpg" alt="ছবি ৯"></a>
+    <a href="images/photo10.jpg" data-lightbox="anniversary" data-title="ছবি ১০"><img src="images/photo10.jpg" alt="ছবি ১০"></a>
+    <a href="images/photo11.jpg" data-lightbox="anniversary" data-title="ছবি ১১"><img src="images/photo11.jpg" alt="ছবি ১১"></a>
+  </div>
+
+  <div class="footer">ভিডিও সেকশন</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>লগইন করুন</title>
+  <style>
+    body {
+      font-family: 'Kalpana', sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>প্রবেশ করুন</h2>
+    <input type="text" id="username" placeholder="ইউজারনেম বা নাম্বার">
+    <input type="password" id="password" placeholder="পাসওয়ার্ড">
+    <button onclick="login()">লগইন</button>
+    <p id="error" style="color: red;"></p>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // এখানে তুমি ইউজারনেম ও পাসওয়ার্ড কাস্টমাইজ করতে পারো
+      if ((username === "arifa123" || username === "01319768205") && password === "15042025") {
+        window.location.href = "home.html"; // তোমার actual anniversary পেজ
+      } else {
+        document.getElementById('error').innerText = "ভুল ইউজারনেম বা পাসওয়ার্ড!";
+      }
+    }
+  </script>
+</body>
+</html>
