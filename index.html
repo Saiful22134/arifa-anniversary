@@ -39,6 +39,7 @@
       border-radius: 5px;
       font-size: 16px;
       background-color: #f9f9f9;
+      box-sizing: border-box;
     }
     input:focus {
       border-color: #3f51b5;
@@ -51,6 +52,8 @@
       font-size: 18px;
       color: #555;
       cursor: pointer;
+      padding: 5px;
+      background-color: transparent;
     }
     button {
       background-color: #4CAF50;
@@ -83,7 +86,7 @@
 </head>
 <body>
   <div class="login-box">
-    <h2>প্রবেশ করুন</h2>
+    <h2>Enter Your Username & Password</h2>
     <input type="text" id="username" placeholder="ইউজারনেম বা নাম্বার">
     <input type="password" id="password" placeholder="পাসওয়ার্ড">
     <span class="show-pass" onclick="togglePassword()">👁️</span>
@@ -108,7 +111,7 @@
       const password = document.getElementById('password').value;
 
       // এখানে তুমি ইউজারনেম ও পাসওয়ার্ড কাস্টমাইজ করতে পারো
-      if ((username === "Arifa123" || username === "01319768205") && password === "15042025") {
+      if ((username === "arifa123" || username === "017XXXXXXXX") && password === "anniv2025") {
         window.location.href = "home.html"; // তোমার actual anniversary পেজ
       } else {
         document.getElementById('error').innerText = "ভুল ইউজারনেম বা পাসওয়ার্ড!";
